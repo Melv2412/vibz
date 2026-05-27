@@ -482,7 +482,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--violet);
   .hero-visual{height:480px}
   .about-grid{grid-template-columns:1fr;gap:30px}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:1fr}
   .pay-grid{grid-template-columns:1fr}
   .order-grid{grid-template-columns:1fr}
   .summary{position:static}
