@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Commander un cadre — Vibz</title>
+<meta name="description" content="Personnalisez votre cadre Vibz : format, couleurs, occasion et texte. Acompte 2 000 FCFA. Livraison 3 jours à Abidjan." />
+<link rel="icon" href="logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Vibz" />
+      <span class="brand-name">Vibz<span>.</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#gallery">Galerie</a>
+      <a href="index.html#how">Comment ça marche</a>
+      <a href="index.html" class="nav-cta">Accueil</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<section class="order-hero">
+  <div class="container">
+    <h1>Commander mon cadre</h1>
+    <p>Personnalisez votre création en quelques secondes.</p>
+  </div>
+</section>
+
+<section class="order-wrap">
+  <div class="container order-grid">
+    <form class="form-card" id="orderForm" novalidate>
+
+      <div class="form-section">
+        <h3>1 · Format du cadre <span class="required">*</span></h3>
+        <p class="hint">Sélectionne la taille de ton cadre.</p>
+        <div class="choice-grid" data-group="size">
+          <label class="choice"><input type="radio" name="size" value="A4" data-price="4500" required /><b>A4</b><span><del>10 000</del> 4 500 FCFA</span></label>
+          <label class="choice"><input type="radio" name="size" value="A3" data-price="7500" /><b>A3</b><span>7 500 FCFA</span></label>
+          <label class="choice"><input type="radio" name="size" value="A2" data-price="12000" /><b>A2</b><span>12 000 FCFA</span></label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>2 · Couleurs du thème <span class="required">*</span></h3>
+        <p class="hint">Choisis au moins <b>deux couleurs</b> (Violet, Jaune ou Mélange doré).</p>
+        <div class="theme-grid" data-group="colors" style="grid-template-columns:repeat(3,1fr)">
+          <label class="theme violet-t"><input type="checkbox" name="colors" value="Violet" /><div class="swatch"><i></i><i></i><i></i></div>Violet</label>
+          <label class="theme jaune-t"><input type="checkbox" name="colors" value="Jaune" /><div class="swatch"><i style="background:var(--violet-deep);opacity:.7"></i><i style="background:var(--violet-deep);opacity:.7"></i><i style="background:var(--violet-deep);opacity:.7"></i></div>Jaune</label>
+          <label class="theme mix-t" style="background:linear-gradient(135deg,var(--violet) 0%,var(--jaune) 100%);color:#fff"><input type="checkbox" name="colors" value="Mélange doré" /><div class="swatch"><i></i><i></i><i></i></div>Mélange</label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>3 · Occasion <span class="required">*</span></h3>
+        <p class="hint">Pour quelle occasion offres-tu ce cadre ?</p>
+        <select name="occasion" required>
+          <option value="">— Choisir l'occasion —</option>
+          <option value="Anniversaire">🎂 Anniversaire</option>
+          <option value="Mariage">💍 Mariage</option>
+          <option value="Meilleure amie">💛 Meilleure amie</option>
+          <option value="Couple">💜 Couple</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <h3>4 · Tes coordonnées <span class="required">*</span></h3>
+        <div class="row-2">
+          <div><label>Prénom <span class="required">*</span></label><input type="text" name="firstname" required maxlength="50" /></div>
+          <div><label>Nom <span class="required">*</span></label><input type="text" name="lastname" required maxlength="50" /></div>
+        </div>
+        <div style="margin-top:14px"><label>Numéro de téléphone <span class="required">*</span></label><input type="tel" name="phone" placeholder="07 00 00 00 00" required pattern="[0-9 +]{8,20}" /></div>
+      </div>
+
+      <div class="form-section">
+        <h3>5 · Texte à inscrire sur le cadre <span class="required">*</span></h3>
+        <p class="hint">Prénom, dédicace, citation… ce qui rendra ton cadre unique.</p>
+        <textarea name="message" required maxlength="300" placeholder="Ex : Happy Birthday Elsa — Tu es une personne incroyable…"></textarea>
+      </div>
+
+      <div class="form-section">
+        <h3>6 · Comment veux-tu nous envoyer tes photos ? <span class="required">*</span></h3>
+        <p class="hint">Tes photos seront envoyées <b>directement dans la conversation</b> du réseau choisi. Vibz ne stocke <b>aucune photo</b> sur le site.</p>
+        <div class="choice-grid" data-group="channel">
+          <label class="choice"><input type="radio" name="channel" value="WhatsApp" required /><b>WhatsApp</b><span>Recommandé</span></label>
+          <label class="choice"><input type="radio" name="channel" value="Instagram" /><b>Instagram</b><span>DM</span></label>
+          <label class="choice"><input type="radio" name="channel" value="TikTok" /><b>TikTok</b><span>DM</span></label>
+        </div>
+      </div>
+
+      <div class="info-box">
+        🔒 <b>Aucune photo n'est stockée</b> sur ce site. Après validation, tu seras redirigé(e) vers le réseau social choisi, où tu devras <b>joindre tes photos manuellement</b> dans la conversation.
+      </div>
+
+      <div class="policy-box">
+        <h4>📜 Politique de commande — à lire avant de valider</h4>
+        <ul>
+          <li>Chaque cadre est une <b>création personnalisée</b> faite spécialement pour toi.</li>
+          <li><b>Aucun remboursement</b> n'est possible après le paiement de l'acompte.</li>
+          <li>Vérifie bien tes <b>photos, textes et informations</b> avant de valider.</li>
+          <li>Acompte obligatoire de <b>2 000 FCFA</b> · le solde se règle à la livraison.</li>
+          <li>Délai : <b>3 jours maximum</b> après validation de l'acompte.</li>
+        </ul>
+        <label class="confirm-check"><input type="checkbox" id="confirm" required /> J'ai relu mes informations et j'accepte la politique de commande de Vibz.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Envoyer ma commande →</button>
+      <p style="text-align:center;color:var(--muted);font-size:12.5px;margin-top:12px">Paiement de l'acompte par Wave · Djamo · Visa après confirmation.</p>
+    </form>
+
+    <aside class="summary">
+      <div class="sum-preview" id="sumPreview">
+        <img src="frame-nadia.png" alt="Aperçu" id="previewImg" />
+        <div class="preview-label">Aperçu du rendu</div>
+      </div>
+      <h3>Récapitulatif</h3>
+      <div class="sum-row"><span>Format</span><span id="sum-size">—</span></div>
+      <div class="sum-row"><span>Couleurs</span><span id="sum-colors">—</span></div>
+      <div class="sum-row"><span>Occasion</span><span id="sum-occasion">—</span></div>
+      <div class="sum-row"><span>Envoi photos</span><span id="sum-channel">—</span></div>
+      <div class="sum-total">
+        <small>Total estimé</small>
+        <div class="big" id="sum-price">— FCFA</div>
+        <small>Acompte <b id="sum-deposit-val">2 000</b> FCFA · Solde <b id="sum-balance">—</b> FCFA à la livraison</small>
+      </div>
+      <div class="sum-deposit">💛 Acompte à payer pour valider : 2 000 FCFA</div>
+      <div style="margin-top:18px;padding-top:18px;border-top:1px dashed rgba(91,42,134,.12);font-size:13px;color:var(--muted)">
+        Besoin d'aide ? <a href="https://wa.me/2250505582856" style="color:var(--violet);font-weight:600">Écris-nous sur WhatsApp</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<a href="https://wa.me/2250505582856" target="_blank" rel="noopener" class="wa-float" aria-label="Contact WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.78 11.78 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.95 11.95 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52ZM12 21.82c-1.86 0-3.69-.5-5.29-1.45l-.38-.22-3.67.96.98-3.58-.25-.37A9.8 9.8 0 0 1 2.18 12C2.18 6.58 6.58 2.18 12 2.18c2.62 0 5.08 1.02 6.94 2.88A9.78 9.78 0 0 1 21.82 12c0 5.42-4.4 9.82-9.82 9.82Zm5.41-7.36c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15s-.77.97-.95 1.17c-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.08 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+</a>
+
+<div class="toast" id="toast">Commande envoyée ✓</div>
+
+<div class="success-overlay" id="successOverlay">
+  <div class="success-content">
+    <div class="success-icon">✨</div>
+    <h2>Commande transmise !</h2>
+    <p>Redirection vers le réseau social...</p>
+    <div class="success-loader"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="order.js"></script>
+</body>
+</html>
